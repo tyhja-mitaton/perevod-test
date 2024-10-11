@@ -1,0 +1,14 @@
+FROM yiisoftware/yii2-php:8.1-apache
+
+# Change document root for Apache
+RUN sed -i -e 's|/app/web|/app/frontend/web|g' /etc/apache2/sites-available/000-default.conf
+
+# install node.js
+# RUN apt-get update
+# RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+# RUN apt-get install -y nodejs
+# RUN npm install -g @vue/cli
+
+# WORKDIR /app
+
+# CMD ["apache2-foreground"]
